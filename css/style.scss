@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.markdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100vh;
+  padding: 20px;
+}
+
+.editor {
+  @extend section;
+  background-color: #37424b;
+  color: #999999;
+
+  textarea {
+    height: 80%;
+    background: #2d2d2d;
+    color: #cccccc;
+    padding: 10px;
+    border: 1px solid #000000;
+    font-weight: 100;
+    font-size: 16px;
+  }
+}
+
+.viewer {
+  @extend section;
+  flex-direction: column;
+  background: #f2f2f2;
+  color: black;
+
+  & h3:nth-child(1) {
+    border-bottom: 1px solid #000000;
+  }
+}
